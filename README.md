@@ -81,7 +81,7 @@ note: l'installation de certaines extensions de php7.4 sera peut-être nécessai
 ```bash
   composer install
 ```
-3- Configurer le user et le password de mysql dans le fichier .env (remplacer 'mysqlUser' par votre user mysql et 'mysqlPassword')
+3- Configurer le user et le password de mysql dans le fichier .env (remplacer 'mysqlUser' par votre user mysql et 'mysqlPassword' par votre mot de passe mysql)
 
 4- Configurer le host et le port de mysql dans le fichier .env si nécessaire
 
@@ -112,7 +112,7 @@ L'api est accessible sur l'url affichée après le lancement du serveur symfony 
 Le chargement des data fixtures devrait créer un utilisateur ({"username": "commercial1@email.com", "password": "123"}), l'authentification se fait par token.
 
 ### Authentification
-Pour récupérer un token il faudrait faire une requête POST sur la route localhost:8000/api/login_check , exemple de requête de demande de token en wget:
+Pour récupérer un token il faudrait faire une requête POST sur la route localhost:8000/api/login_check avec les infos de l'utilisateur dans le body ({"username": "commercial1@email.com", "password": "123"}), exemple de requête de demande de token en wget:
 
 ```
 wget --no-check-certificate --quiet \
